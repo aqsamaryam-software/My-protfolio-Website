@@ -119,6 +119,14 @@
     .project-link { margin-top: auto; padding-top: 28px; color: var(--cyan); text-decoration: none; font-size: .86rem; font-weight: 700; }
     .project-link span { display: inline-block; transition: transform .2s ease; }
     .project-link:hover span { transform: translateX(5px); }
+    .services-grid, .certificates-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .service-card, .certificate-card { padding: 25px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,.58); box-shadow: 0 12px 30px rgba(74,58,43,.05); }
+    .service-card { min-height: 220px; }
+    .service-card h3, .certificate-card h3 { margin-top: 21px; font-size: 1.28rem; line-height: 1.15; }
+    .service-card p, .certificate-card p { margin-top: 12px; color: var(--muted); font-size: .92rem; }
+    .service-icon { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 13px; color: #fffdf9; background: linear-gradient(135deg, var(--cyan), var(--pink)); font-weight: 700; }
+    .certificate-card { min-height: 190px; }
+    .certificate-card .period { color: var(--cyan); font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 
     .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 70px; }
     .about-copy { color: var(--muted); font-size: 1.03rem; }
@@ -161,7 +169,7 @@
       .nav-links a:hover { background: rgba(49,123,120,.08); }
       .hero { grid-template-columns: 1fr; gap: 55px; padding-top: 70px; }
       .portrait-wrap { width: min(100%, 340px); justify-self: start; }
-      .projects-grid, .journey-grid, .about-grid { grid-template-columns: 1fr; gap: 45px; }
+      .projects-grid, .services-grid, .certificates-grid, .journey-grid, .about-grid { grid-template-columns: 1fr; gap: 45px; }
       .section-heading { display: block; }
       .section-heading p { margin-top: 16px; }
     }
@@ -186,7 +194,9 @@
       <a class="brand" href="#top"><span class="brand-mark">AM</span><span>Aqsa Maryam</span></a>
       <ul class="nav-links" id="site-menu">
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#certificates">Certificates</a></li>
         <li><a href="#journey">Journey</a></li>
       </ul>
       <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
@@ -226,11 +236,29 @@
       </div>
     </section>
 
+    <section class="container section" id="services">
+      <div class="section-heading reveal"><div><span class="eyebrow">How I can help</span><h2>Practical digital solutions.</h2></div><p>Focused services built around clean design, useful functionality, and a growing software engineering mindset.</p></div>
+      <div class="services-grid">
+        <article class="service-card reveal"><span class="service-icon">01</span><h3>Responsive websites</h3><p>Modern websites that work smoothly across phones, tablets, and desktop screens.</p></article>
+        <article class="service-card reveal"><span class="service-icon">02</span><h3>Laravel & PHP apps</h3><p>Backend-focused web applications with practical features such as products, orders, and admin workflows.</p></article>
+        <article class="service-card reveal"><span class="service-icon">03</span><h3>Website improvements</h3><p>Clearer layouts, mobile-friendly interfaces, and thoughtful updates that make websites easier to use.</p></article>
+      </div>
+    </section>
+
     <section class="container section" id="about">
       <div class="section-heading reveal"><div><span class="eyebrow">A little about me</span><h2>Curious by nature.<br>Intentional in code.</h2></div></div>
       <div class="about-grid">
         <div class="about-copy reveal"><p>I’m currently studying BS Software Engineering at Ghazi University. My focus is building a strong foundation in web development, problem solving, and secure digital experiences.</p><p>When I’m away from my editor, you’ll find me participating in speech and debate competitions, learning a new tool, or exploring ideas that make technology more useful.</p></div>
         <div class="skill-list reveal"><span class="skill"><strong>01</strong> Web Development</span><span class="skill"><strong>02</strong> Laravel & PHP</span><span class="skill"><strong>03</strong> Cybersecurity</span><span class="skill"><strong>04</strong> Digital Marketing</span><span class="skill"><strong>05</strong> Prompt Engineering</span><span class="skill"><strong>06</strong> MS Office</span><span class="skill"><strong>07</strong> Windows Installation</span><span class="skill"><strong>08</strong> Public Speaking</span></div>
+      </div>
+    </section>
+
+    <section class="container section" id="certificates">
+      <div class="section-heading reveal"><div><span class="eyebrow">Recognition</span><h2>Certificates & achievements.</h2></div><p>Milestones from academic, presentation, and public-speaking activities.</p></div>
+      <div class="certificates-grid">
+        <article class="certificate-card reveal"><span class="period">25 August 2026</span><h3>Speech Competition</h3><p>Certificate of Participation · Ghazi University</p></article>
+        <article class="certificate-card reveal"><span class="period">16 May 2026</span><h3>Speech Competition</h3><p>Certificate of Participation · Punjab Council of the Arts · D.G. Khan Division</p></article>
+        <article class="certificate-card reveal"><span class="period">Award of Excellence</span><h3>Presentation Competition</h3><p>Certificate of Appreciation · 3rd position · Ghazi University</p></article>
       </div>
     </section>
 
