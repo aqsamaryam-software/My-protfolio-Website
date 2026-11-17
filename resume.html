@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resume of Aqsa Maryam, Software Engineering student and web developer.">
+  <title>Resume | Aqsa Maryam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+  <nav class="site-nav"><div class="container nav-inner"><a class="brand" href="index.html"><span class="brand-mark">AM</span><span>Aqsa Maryam</span></a><ul class="nav-links" id="site-menu"><li><a href="index.html#projects">Projects</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#journey">Journey</a></li><li><a href="resume.html">Resume</a></li></ul><button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button><a class="nav-cta" href="contact.html">Let's talk ↗</a></div></nav>
+
+  <main>
+    <header class="container page-hero"><span class="eyebrow">Professional profile</span><h1>Aqsa Maryam’s <span class="gradient-text">resume.</span></h1><p>A printable overview of my education, projects, skills, and achievements.</p></header>
+    <div class="resume-actions"><button class="button button-primary" type="button" onclick="window.print()">Print / Save PDF <span>↗</span></button></div>
+    <article class="resume-shell">
+      <header class="resume-header">
+        <div><h1>Aqsa Maryam</h1><p>Software Engineering Student · Web Developer</p></div>
+        <div class="resume-contact"><a href="mailto:aqsamaryamm2@gmail.com">aqsamaryamm2@gmail.com</a><span>Dera Ghazi Khan, Punjab</span><a href="https://github.com/aqsamaryam-software">github.com/aqsamaryam-software</a><a href="https://www.linkedin.com/in/aqsa-maryam-84b518395">LinkedIn profile</a></div>
+      </header>
+
+      <section class="resume-section"><h2>Profile</h2><p>Software Engineering student and Laravel/PHP developer who enjoys turning ideas into practical, responsive web experiences. Currently building a strong foundation in web development, problem solving, cybersecurity, and secure digital experiences.</p></section>
+
+      <section class="resume-section"><h2>Education</h2><div class="resume-item"><h3>BS Software Engineering · 3rd Semester</h3><div class="meta">Ghazi University, Dera Ghazi Khan · Current CGPA: 3.66</div></div><div class="resume-item"><h3>Intermediate · Pre-Medical</h3><div class="meta">Government Post Graduate College · 1034 / 1200 · 2025</div></div><div class="resume-item"><h3>Matriculation · Science</h3><div class="meta">Government Girls High School No. 1 · 1006 / 1100 · 2023</div></div></section>
+
+      <section class="resume-section"><h2>Technical skills</h2><div class="resume-skills"><span class="resume-skill">Laravel</span><span class="resume-skill">PHP</span><span class="resume-skill">Blade</span><span class="resume-skill">Web Development</span><span class="resume-skill">Cybersecurity</span><span class="resume-skill">Digital Marketing</span><span class="resume-skill">Prompt Engineering</span><span class="resume-skill">MS Office</span><span class="resume-skill">Windows Installation</span><span class="resume-skill">Public Speaking</span></div></section>
+
+      <section class="resume-section"><h2>Selected projects</h2><div class="resume-grid"><div class="resume-item"><h3>Ecommerce Shop Website</h3><div class="meta">Laravel · PHP · Blade</div><p>Shop platform with an admin panel for managing products and orders.</p></div><div class="resume-item"><h3>Crop Disease Detection</h3><div class="meta">Laravel · PHP · Web app</div><p>Web-based tool designed to help identify crop diseases.</p></div><div class="resume-item"><h3>Mutton Shop Website</h3><div class="meta">Laravel · PHP · Blade</div><p>Practice application focused on backend development and product flows.</p></div></div></section>
+
+      <section class="resume-section"><h2>Achievements</h2><div class="resume-grid"><div class="resume-item"><h3>Speech Competition</h3><div class="meta">Ghazi University · Certificate of Participation · 25 August 2026</div></div><div class="resume-item"><h3>Speech Competition</h3><div class="meta">Punjab Council of the Arts · D.G. Khan Division · 16 May 2026</div></div><div class="resume-item"><h3>Presentation Competition</h3><div class="meta">Ghazi University · 3rd position / Award of Excellence</div></div><div class="resume-item"><h3>Independence Month Celebrations</h3><div class="meta">Certificate of Appreciation · 14 August 2026</div></div></div></section>
+    </article>
+  </main>
+
+  <footer class="container"><span>© 2026 Aqsa Maryam. Designed and built with care.</span><div class="socials"><a href="index.html">Home</a><a href="contact.html">Contact</a><a href="https://github.com/aqsamaryam-software">GitHub</a></div></footer>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const siteMenu = document.querySelector('#site-menu');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = siteMenu.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    siteMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+      siteMenu.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
+</body>
+</html>
