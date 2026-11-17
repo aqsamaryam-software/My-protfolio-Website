@@ -10,11 +10,23 @@
   <link rel="stylesheet" href="pages.css">
 </head>
 <body>
-  <nav class="site-nav"><div class="container nav-inner"><a class="brand" href="index.html"><span class="brand-mark">AM</span><span>Aqsa Maryam</span></a><ul class="nav-links"><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="index.html#journey">Journey</a></li></ul><a class="nav-cta" href="contact.html">Let's talk ↗</a></div></nav>
+  <nav class="site-nav"><div class="container nav-inner"><a class="brand" href="index.html"><span class="brand-mark">AM</span><span>Aqsa Maryam</span></a><ul class="nav-links" id="site-menu"><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="index.html#journey">Journey</a></li></ul><button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button><a class="nav-cta" href="contact.html">Let's talk ↗</a></div></nav>
   <main>
     <header class="container page-hero"><span class="eyebrow">Contact</span><h1>Let’s start a <span class="gradient-text">conversation.</span></h1><p>I’m always open to meaningful conversations, creative ideas, and opportunities to learn and collaborate.</p></header>
     <section class="container section"><div class="contact-card"><span class="eyebrow">Choose an option</span><h2>Connect with Aqsa</h2><p>For email, copy the address or open it in your preferred email service. You can also visit my professional profiles directly.</p><div class="contact-options"><a class="contact-option" href="mailto:aqsamaryamm2@gmail.com">✉ Email me</a><a class="contact-option" href="https://www.linkedin.com/in/aqsa-maryam-84b518395" target="_blank" rel="noreferrer">in LinkedIn</a><a class="contact-option" href="https://github.com/aqsamaryam-software" target="_blank" rel="noreferrer">⌘ GitHub</a></div><p><strong>Email:</strong> aqsamaryamm2@gmail.com</p></div></section>
   </main>
   <footer class="container"><span>© 2026 Aqsa Maryam. Designed and built with care.</span><div class="socials"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="https://github.com/aqsamaryam-software" target="_blank" rel="noreferrer">GitHub</a></div></footer>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const siteMenu = document.querySelector('#site-menu');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = siteMenu.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    siteMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+      siteMenu.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
 </body>
 </html>
