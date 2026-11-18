@@ -26,7 +26,7 @@ body {
 @keyframes page-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 a { color: inherit; }
 .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-.site-nav { position: sticky; top: 0; z-index: 5; border-bottom: 1px solid rgba(49,123,120,.14); background: rgba(224,239,234,.96); backdrop-filter: blur(18px); }
+.site-nav { position: sticky; top: 0; z-index: 5; border-bottom: 1px solid var(--line); background: rgba(247,243,237,.88); backdrop-filter: blur(18px); }
 .nav-inner { position: relative; min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .brand { display: flex; align-items: center; gap: 11px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; text-decoration: none; letter-spacing: -.03em; }
 .brand-mark { width: 35px; height: 35px; display: grid; place-items: center; border-radius: 12px; color: #fffdf9; background: linear-gradient(135deg, var(--teal), var(--coral)); font-size: .9rem; }
@@ -86,7 +86,7 @@ footer { display: flex; justify-content: space-between; gap: 20px; padding: 35px
 footer .socials { display: flex; gap: 18px; }
 @media (max-width: 820px) {
   .menu-toggle { display: inline-flex; align-items: center; gap: 7px; }
-  .nav-links { display: none; position: absolute; top: calc(100% - 1px); left: 0; right: 0; flex-direction: column; gap: 0; padding: 8px; border: 1px solid rgba(49,123,120,.14); border-top: 0; border-radius: 0 0 16px 16px; background: rgba(224,239,234,.98); box-shadow: 0 16px 28px rgba(74,58,43,.1); }
+  .nav-links { display: none; position: absolute; top: calc(100% - 1px); left: 0; right: 0; flex-direction: column; gap: 0; padding: 8px; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 16px 16px; background: rgba(247,243,237,.97); box-shadow: 0 16px 28px rgba(74,58,43,.1); }
   .nav-links.is-open { display: flex; }
   .nav-links a { display: block; padding: 12px 10px; border-radius: 10px; }
   .nav-links a:hover { background: rgba(49,123,120,.08); }
